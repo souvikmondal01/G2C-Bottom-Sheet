@@ -30,7 +30,7 @@ public class MyBottomSheetFragment extends BottomSheetDialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         BottomSheetDialog bottomSheetDialog = (BottomSheetDialog) super.onCreateDialog(savedInstanceState);
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_bottom_sheet,null);
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_bottom_sheet, null);
         bottomSheetDialog.setContentView(view);
 
         RecyclerView rvData = view.findViewById(R.id.rv_data);
