@@ -29,22 +29,27 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void clickBottomSheetFragment() {
-        List<ItemObject> list = new ArrayList<>();
-        list.add(new ItemObject("Souvik"));
-        list.add(new ItemObject("Mondal"));
-        list.add(new ItemObject("Souvik"));
-        list.add(new ItemObject("Mondal"));
-        list.add(new ItemObject("Souvik"));
-        list.add(new ItemObject("Mondal"));
+        List<HorizontalObject> list = new ArrayList<>();
+        list.add(new HorizontalObject("ABC Oil","This is the main reason why you should choose this oil over anything else","₹ 23"));
+        list.add(new HorizontalObject("XYZ Oil","This is the main reason why you should choose this oil over anything else","₹ 53"));
+        list.add(new HorizontalObject("ASD Oil","This is the main reason why you should choose this oil over anything else","₹ 100"));
+        list.add(new HorizontalObject("QWE Oil","This is the main reason why you should choose this oil over anything else","₹ 50"));
+        list.add(new HorizontalObject("TestCaseTestCaseTestCase","This is the main reason why you should choose this oil over anything else","₹ 7000000000000000"));
 
-        MyBottomSheetFragment myBottomSheetFragment = new MyBottomSheetFragment(list, new IClickListener() {
+        List<VerticalObject> list2 = new ArrayList<>();
+        list2.add(new VerticalObject(0,"Air filter","Adding a Filter means that you will be in control of what it","₹ 300"));
+        list2.add(new VerticalObject(0,"Air filter","Adding a Filter means that you will be in control of what it","₹ 30"));
+        list2.add(new VerticalObject(0,"Air filter","Adding a Filter means that you will be in control of what it","₹ 200"));
+        list2.add(new VerticalObject(0,"Air filter","Adding a Filter means that you will be in control of what it","₹ 500"));
+
+        BottomSheetFragment bottomSheetFragment = new BottomSheetFragment(list, new IClickListener() {
             @Override
-            public void clickItem(ItemObject itemObject) {
+            public void clickItem(HorizontalObject itemObject) {
                 Toast.makeText(MainActivity.this, itemObject.getName(), Toast.LENGTH_SHORT).show();
             }
-        });
+        },list2);
 
-        myBottomSheetFragment.show(getSupportFragmentManager(), myBottomSheetFragment.getTag());
+        bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
 
     }
 

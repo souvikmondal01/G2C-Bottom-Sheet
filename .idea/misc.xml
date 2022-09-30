@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/drawable/add_btn_bg.xml" value="0.1315" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/drawable/border.xml" value="0.1315" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/drawable/border2.xml" value="0.1315" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/drawable/border3.xml" value="0.1315" />
         <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/drawable/btn_bg.xml" value="0.1315" />
-        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/activity_main.xml" value="0.16145833333333334" />
-        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/layout_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/drawable/item_bg.xml" value="0.1315" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/drawable/item_stroke.xml" value="0.1315" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/activity_main.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/horizontal_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/layout_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/pac_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/SOUVIK MANDAL/AndroidStudioProjects/G2CBottomSheet/app/src/main/res/layout/vertical_item.xml" value="0.4466666666666667" />
       </map>
     </option>
   </component>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="108dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/border3"
+        android:layout_height="108dp">
+
+        <ImageView
+            android:id="@+id/iv_item_pac"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_oil_barrel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_name_pac"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Air filter"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_cost_pac"
+            app:layout_constraintStart_toEndOf="@id/iv_item_pac"
+            app:layout_constraintTop_toTopOf="@id/tv_item_cost_pac"
+            app:layout_constraintEnd_toStartOf="@id/tv_item_cost_pac"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_description_pac"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Adding a Filter means that you will be in control of what it"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_add_pac"
+            app:layout_constraintStart_toEndOf="@id/iv_item_pac"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_name_pac" />
+
+        <TextView
+            android:id="@+id/tv_item_cost_pac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="₹ 300" />
+
+        <Button
+            android:id="@+id/btn_add_pac"
+            android:layout_width="64dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/add_btn_bg"
+            android:fontFamily="monospace"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/blue200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_item_description_pac"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_cost_pac" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+

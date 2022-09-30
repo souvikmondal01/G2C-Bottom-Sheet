@@ -7,7 +7,6 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,14 +15,18 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.List;
 
-public class MyBottomSheetFragment extends BottomSheetDialogFragment {
+public class BottomSheetFragment extends BottomSheetDialogFragment {
 
-    private List<ItemObject> listItems;
+    private List<HorizontalObject> listItems;
     private IClickListener iClickListener;
 
-    public MyBottomSheetFragment(List<ItemObject> listItems, IClickListener iClickListener) {
+    private List<VerticalObject> pacListItems;
+
+
+    public BottomSheetFragment(List<HorizontalObject> listItems, IClickListener iClickListener, List<VerticalObject> pacListItems) {
         this.listItems = listItems;
         this.iClickListener = iClickListener;
+        this.pacListItems = pacListItems;
     }
 
     @NonNull
@@ -38,16 +41,25 @@ public class MyBottomSheetFragment extends BottomSheetDialogFragment {
         linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
         rvData.setLayoutManager(linearLayoutManager);
 
-        ItemAdapter itemAdapter = new ItemAdapter(listItems, new IClickListener() {
+        HorizontalAdapter horizontalAdapter = new HorizontalAdapter(listItems, new IClickListener() {
             @Override
-            public void clickItem(ItemObject itemObject) {
+            public void clickItem(HorizontalObject itemObject) {
                 iClickListener.clickItem(itemObject);
             }
         });
-        rvData.setAdapter(itemAdapter);
+        rvData.setAdapter(horizontalAdapter);
 
 //        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(),DividerItemDecoration.HORIZONTAL);
 //        rvData.addItemDecoration(itemDecoration);
+
+
+        RecyclerView rvPac = view.findViewById(R.id.rv_people_also_choose);
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext());
+        linearLayoutManager1.setOrientation(RecyclerView.VERTICAL);
+        rvPac.setLayoutManager(linearLayoutManager1);
+        VerticalAdapter verticalAdapter = new VerticalAdapter(pacListItems);
+        rvPac.setAdapter(verticalAdapter);
+
 
         return bottomSheetDialog;
     }
